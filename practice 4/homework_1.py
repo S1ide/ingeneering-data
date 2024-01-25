@@ -124,11 +124,11 @@ def filter_prob_price(db, min_prob_price, limit):
     return items
 
 
-# data = read_file()
+data = read_file()
 
 db = connect_to_db(db_file)
-# create_table(db)
-# insert_data(db, data)
+create_table(db)
+insert_data(db, data)
 
 sort_views = sort_by_years(db, var + 10)
 with open(res_file_sorted, 'w', encoding='utf-8') as f:

@@ -158,13 +158,13 @@ def city_popul(db, name):
     return []
 
 
-# first_data = read_first_file()
-# second_data = read_second_file()
+first_data = read_first_file()
+second_data = read_second_file()
 db = connect_to_db(db_file)
-# create_first_table(db)
-# create_second_table(db)
-# insert_first_data(db, first_data)
-# insert_second_data(db, second_data)
+create_first_table(db)
+create_second_table(db)
+insert_first_data(db, first_data)
+insert_second_data(db, second_data)
 
 filtered_places = filter_by_rating(db, 2.6)
 with open(res_file_filter, 'w', encoding='utf-8') as f:
